@@ -1,0 +1,115 @@
+/* reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* import fonts */
+/* 
+- Family: [Inter](https://fonts.google.com/specimen/Inter)
+- Weights: 400, 600, 700
+*/
+@font-face {
+  font-family: inter;
+
+  src: url(./assets/fonts/Inter-VariableFont_slnt\,wght.ttf);
+}
+/* use variables */
+:root {
+  /* colors */
+  --green: hsl(75, 94%, 57%);
+  --white: hsl(0, 0%, 100%);
+  --grey-700: hsl(0, 0%, 20%);
+  --grey-800: hsl(0, 0%, 12%);
+  --grey-900: hsl(0, 0%, 8%);
+  /* Typography */
+  --paragraph-font-size: 14px;
+  font-family: inter;
+  /* sizes */
+  --padding-container: 20px;
+  --br-container: 15px;
+  --br-img: 50%;
+}
+
+body {
+  background-color: var(--grey-900);
+  font-family: inter;
+}
+
+h1 {
+  color: var(--white);
+  font-weight: 800;
+}
+
+
+p {
+  font-size: var(--paragraph-font-size);
+  color: var(--green);
+  font-weight: 500;
+}
+
+.container p:nth-of-type(1){
+    margin-top: -10px;
+}
+
+.container p:nth-of-type(2){
+    color:var(--white);
+
+}
+
+
+/* deal with our container */
+/*  f-c, hv, br, w => to center */
+/* our design must work from screen 320 to upper */
+.container {
+  background-color: var(--grey-800);
+  margin: 25% auto 0;
+  width: 300px;
+  height: 90hv;
+  border-radius: var(--br-container);
+  padding: var(--padding-container);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  margin-bottom: 5px;
+}
+
+.container img {
+  width: 100px;
+  height: 100px;
+  border-radius: var(--br-img);
+  margin-bottom: 10px;
+}
+
+.btn{
+    width: 100%;
+    padding: 20px;
+    font-weight: 600;
+
+}
+button {
+  display: block;
+  margin-bottom: 10px;
+  background-color: var(--grey-700);
+  color: var(--white);
+  padding: 10px 0;
+  width: 100%;
+  border: none;
+  border-radius: 5px;
+  font-weight: 800;
+}
+
+button:hover {
+  background-color: var(--green);
+  color: black;
+}
+
+@media screen and (min-width: 421px) {
+  .container {
+    width: 420px;
+  }
+}
